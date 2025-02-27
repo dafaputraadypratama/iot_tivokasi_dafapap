@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Dafa Putra Ady Pratama",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": 81.64, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -57.3, "left": -72.6, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "dht1:VCC", "esp:3V3", "red", [ "v-9.6", "h144" ] ],
+      [ "dht1:SDA", "esp:27", "green", [ "v86.4", "h134.5" ] ],
+      [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
